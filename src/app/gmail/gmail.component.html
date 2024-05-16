@@ -1,0 +1,36 @@
+<header class="header">
+  <h1>GeMail</h1>
+</header>
+
+<div class="container">
+  <section class="enviar">
+    <h3>Enviar E-mail</h3>
+    <form (ngSubmit)="sendEmail()" class="compose-form">
+      <div class="form-group">
+        <label for="to">Para:</label>
+        <input [(ngModel)]="newEmail.to" name="to" id="to" required/>
+      </div>
+      <div class="form-group">
+        <label for="subject">Assunto:</label>
+        <input [(ngModel)]="newEmail.subject" name="subject" id="subject" required/>
+      </div>
+      <div class="form-group">
+        <label for="message">Mensagem:</label>
+        <textarea [(ngModel)]="newEmail.message" name="message" id="message" required></textarea>
+      </div>
+      <button type="submit" style="margin-left: 94%;">Enviar</button>
+    </form>
+  </section>
+</div>
+
+<div>
+  <button (click)="loadEmails()" class="load">Carregar E-mails</button>
+</div>
+
+<section class="email-list">
+  <div *ngFor="let email of emails" class="email-card">
+    <p><strong>From:</strong> {{ getHeader(email.payload.headers, 'From') }}</p>
+    <p><strong>Subject:</strong> {{ getHeader(email.payload.headers, 'Subject') }}</p>
+    <button class="fakeButton">Deletar</button>
+  </div>
+</section>

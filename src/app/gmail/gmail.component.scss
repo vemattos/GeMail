@@ -1,0 +1,84 @@
+.header {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 2px;
+}
+
+.container {
+  margin-top: 3%;
+  max-width: 90%;
+  padding-left: 5%;
+  border: 8px;
+}
+
+.enviar {
+  background-color: #cccaca;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4284ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.load {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4284ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.email-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.email-card {
+  background-color: #cccaca;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  flex-basis: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.fakeButton{
+  margin-left: 80%;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff4242;
+  color: white;
+  padding: 10px 20px;
+}
